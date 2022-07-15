@@ -1,4 +1,8 @@
 <button (click)="noneListeIdee()">Voir les idees</button>
-<div [hidden]="hideenDivList">
+<div [hidden]="hideenDivList"
+     [ngClass]="nombreDecaractereSaisie > 5 ? 'styleClass':'styleClass1'
+">
   <h1>Je dois recevoir la liste des idees</h1>
+  <input type="text" (input)="contenuSaisie($event)">
+  <span>Vous avez saisie {{nombreDecaractereSaisie}}</span>
 </div>
