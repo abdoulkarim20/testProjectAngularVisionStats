@@ -11,7 +11,7 @@ export class ListeIdeeComponent implements OnInit {
 
   ngOnInit() {
   }
-  hideenDivList:boolean=false;
+  hideenDivList:boolean=true;
   noneListeIdee(){
     let statustDive=!this.hideenDivList;
     this.hideenDivList=statustDive;
@@ -26,5 +26,40 @@ export class ListeIdeeComponent implements OnInit {
       this.restAsaisir=this.totaleSaisie-this.nombreDecaractereSaisie
       console.log("il vous reste" +this.restAsaisir);
     }
+  }
+  idees=[
+    {
+      id:1,
+      titre:"Idee 1",
+      contenu:"Apprentissage de concept de dat binding",
+      status:true
+    },
+    {
+      id:2,
+      titre:"Idee 2",
+      contenu:"Apprentissage de concept de dat binding",
+      status:false
+    },
+    {
+      id:3,
+      titre:"Idee 3",
+      contenu:"Apprentissage de concept de dat binding",
+      status:true
+    },
+    {
+      id:4,
+      titre:"Idee 4",
+      contenu:"Apprentissage de concept de dat binding",
+      status:false
+    }
+  ]
+  getAllIdees(){
+    return this.idees.length;
+  }
+  getAllIdeesValide(){
+    return this.idees.filter(idee=>idee.status===true).length
+  }
+  getAllIdeesInvalide(){
+    return this.idees.filter(idee=>idee.status===false).length
   }
 }

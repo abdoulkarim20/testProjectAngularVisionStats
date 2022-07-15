@@ -1,8 +1,42 @@
-<button (click)="noneListeIdee()">Voir les idees</button>
-<div [hidden]="hideenDivList"
-     [ngClass]="nombreDecaractereSaisie > 5 ? 'styleClass':'styleClass1'
-">
-  <h1>Je dois recevoir la liste des idees</h1>
-  <input type="text" (input)="contenuSaisie($event)">
-  <span>Vous avez saisie {{nombreDecaractereSaisie}}</span>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-6">
+      <button class="my-2" (click)="noneListeIdee()">Voir les idees</button>
+      <button class="btn-group-lg mx-2" routerLink="ajouter-idee">Ajouter une idee</button>
+      <div [hidden]="hideenDivList"
+           [ngClass]="nombreDecaractereSaisie > 5 ? 'styleClass':'styleClass1'
+  ">
+        <app-filtre-idee
+        [allIdees]="getAllIdees()"
+        [valideIdees]="getAllIdeesValide()"
+        [invalideIdees]="getAllIdeesInvalide()">
+
+        </app-filtre-idee>
+        <div class="card my-2">
+          <div class="card-header">
+            <h3 class="text-center">La liste des idees</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="div-idee">
+            <div [ngClass]="idee.status==true? 'bordureTrue':'bordureFalse'" class="text-center mx-1" *ngFor="let idee of idees">
+              <p class="">{{idee.titre}}</p>
+              <p>{{idee.contenu}}</p>
+              <p>{{idee.status}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <input type="text" (input)="contenuSaisie($event)">
+          <span class="mx-3">Vous avez saisie {{nombreDecaractereSaisie}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+  </div>
 </div>
+

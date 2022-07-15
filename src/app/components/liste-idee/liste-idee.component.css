@@ -2,5 +2,15 @@
   border:2px solid red;
 }
 .styleClass1{
-  border:2px solid green;
+  border:2px solid black;
+}
+.div-idee{
+  display: flex;
+  flex-direction: row;
+}
+.bordureTrue{
+  border: 1px solid green;
+}
+.bordureFalse{
+  border: 1px solid red;
 }
