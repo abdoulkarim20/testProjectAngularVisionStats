@@ -20,7 +20,7 @@
         <div class="card-body">
           <div class="div-idee">
             <div [ngClass]="idee.status==true? 'bordureTrue':'bordureFalse'" class="text-center mx-1" *ngFor="let idee of idees">
-              <p class="">{{idee.titre}}</p>
+              <p>{{idee.titre}}</p>
               <p>{{idee.contenu}}</p>
               <p>{{idee.status}}</p>
             </div>
