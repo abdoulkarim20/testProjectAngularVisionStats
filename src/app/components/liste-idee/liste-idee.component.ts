@@ -31,25 +31,31 @@ export class ListeIdeeComponent implements OnInit {
     {
       id:1,
       titre:"Idee 1",
-      contenu:"Apprentissage de concept de dat binding",
+      contenu:"Apprentissage de concept de data binding",
       status:true
     },
     {
       id:2,
       titre:"Idee 2",
-      contenu:"Apprentissage de concept de dat binding",
+      contenu:"Apprentissage de concept de data binding",
       status:false
     },
     {
       id:3,
       titre:"Idee 3",
-      contenu:"Apprentissage de concept de dat binding",
+      contenu:"Apprentissage de concept de data binding",
       status:true
     },
     {
       id:4,
       titre:"Idee 4",
-      contenu:"Apprentissage de concept de dat binding",
+      contenu:"Apprentissage de concept de data binding",
+      status:false
+    },
+    {
+      id:5,
+      titre:"Idee 5",
+      contenu:"Apprentissage de concept de data binding",
       status:false
     }
   ]

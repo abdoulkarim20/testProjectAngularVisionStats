@@ -19,8 +19,8 @@
           </div>
         </div>
         <div class="card-body">
-          <div class="div-idee" *ngFor="let idee of idees">
-            <div
+          <div *ngFor="let idee of idees">
+            <div class="div-idee"
               [ngClass]="idee.status==true? 'bordureTrue':'bordureFalse'" class="text-center mx-1"
               *ngIf="ideesRadioButton=='all' || (ideesRadioButton=='valide'?idee.status==true:idee.status==false)"
             >
