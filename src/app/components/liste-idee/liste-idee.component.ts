@@ -57,9 +57,16 @@ export class ListeIdeeComponent implements OnInit {
     return this.idees.length;
   }
   getAllIdeesValide(){
-    return this.idees.filter(idee=>idee.status===true).length
+    return this.idees.filter(idee=>idee.status==true).length
   }
   getAllIdeesInvalide(){
-    return this.idees.filter(idee=>idee.status===false).length
+    return this.idees.filter(idee=>idee.status==false).length
   }
+
+  ideesRadioButton:string='all';
+  onFilterRadioButtonChange(data:any){
+    this.ideesRadioButton=data;
+    console.log(this.ideesRadioButton);
+  }
+
 }

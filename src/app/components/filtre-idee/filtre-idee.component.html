@@ -1,15 +1,18 @@
 <div class="container">
   <span>filter les idees:</span>
   <div class="ms-0">
-    <input type="radio" name="filtre" value="all">
+    <input type="radio" name="filtre" value="all" [(ngModel)]="radioBouttonSelectionner"
+          (change)="radioButtonSelectionnerChange()">
     <span>Nous avons recus {{allIdees}} idees</span>
   </div>
   <div class="ms-0">
-    <input type="radio" name="filtre" value="valide">
+    <input type="radio" name="filtre" value="valide" [(ngModel)]="radioBouttonSelectionner"
+           (change)="radioButtonSelectionnerChange()">
     <span>Nous avons valider {{valideIdees}} idees</span>
   </div>
   <div class="ms-0">
-    <input type="radio" name="filtre" value="invalide">
+    <input type="radio" name="filtre" value="invalide" [(ngModel)]="radioBouttonSelectionner"
+           (change)="radioButtonSelectionnerChange()">
     <span>Nous avons invalider {{invalideIdees}} idees</span>
   </div>
 </div>

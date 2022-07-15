@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-filtre-idee',
@@ -11,7 +11,19 @@ export class FiltreIdeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //Partie decorator type Input
   @Input() allIdees:number=0;
   @Input() valideIdees:number=0;
   @Input() invalideIdees:number=0
+
+  //Partie decorator type Output
+  radioBouttonSelectionner:string='all';
+  @Output()
+  filterButtonSelectionnerChange = new EventEmitter<any>();
+
+  radioButtonSelectionnerChange(){
+
+    this.filterButtonSelectionnerChange.emit(this.radioBouttonSelectionner);
+    //console.log(this.radioBouttonSelectionner)
+  }
 }
